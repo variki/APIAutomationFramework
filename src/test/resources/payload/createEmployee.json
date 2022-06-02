@@ -1,0 +1,18 @@
+{
+  "id": "idnumber",
+  "fname": "fname",
+  "lname": "lname",
+  "email": "Donald@gmail.com",
+  "jobs": [
+    "Tester",
+    "Trainer"
+  ],
+  "favfoods": {
+    "breakfast": "idly",
+    "lunch": "rice",
+    "dinner": [
+      "chapathi",
+      "milk"
+    ]
+  }
+}
