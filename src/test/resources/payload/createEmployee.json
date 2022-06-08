@@ -1,7 +1,7 @@
 {
-  "id": "idnumber",
-  "fname": "fname",
-  "lname": "lname",
+  "id": ${idNumber},
+  "firstname": "fname",
+  "lastname": "lname",
   "email": "Donald@gmail.com",
   "jobs": [
     "Tester",

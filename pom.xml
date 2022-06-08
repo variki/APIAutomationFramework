@@ -9,16 +9,17 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+            <maven.compiler.source>11</maven.compiler.source>
+            <maven.compiler.target>11</maven.compiler.target>
         <restassured.version>4.5.0</restassured.version>
         <jackson.version>2.13.1</jackson.version>
         <assertjcore.version>3.21.0</assertjcore.version>
-        <testng.version>6.14.3</testng.version>
+        <testng.version>7.6.0</testng.version>
         <lombok.version>1.18.24</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
         <json.version>20220320</json.version>
         <jsonschema.version>5.1.0</jsonschema.version>
+        <extent.version>5.0.9</extent.version>
     </properties>
 
     <dependencies>
@@ -48,7 +49,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -77,6 +77,26 @@
             <version>${jsonschema.version}</version>
         </dependency>
 
-    </dependencies>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extent.version}</version>
+        </dependency>
+</dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
